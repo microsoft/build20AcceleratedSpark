@@ -1,0 +1,13 @@
+{
+	"name": "GetHttpTaxi",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": " https://s3.amazonaws.com/nyc-tlc/trip+data/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

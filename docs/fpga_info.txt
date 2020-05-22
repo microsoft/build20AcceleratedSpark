@@ -1,0 +1,38 @@
+File: boris@51.143.2.244:/home/boris/fpga_demo/yellow_tripdata_2011-06.csv
+
+(passwd: BuildDemo2019)
+
+Queries: 
+
+0. select count(*) as total from $tableName
+1. select payment_type, count(*) as total from $tableName group by payment_type
+2. select passenger_count, avg(total_amount) as avg_amount from $tableName group by passenger_count
+3. select passenger_count, year(tpep_pickup_datetime) year, count(*) total FROM $tableName group by passenger_count, year
+4. select passenger_count, year(tpep_pickup_datetime) as year, 
+    cast(trip_distance as int) as distance, 
+    count(*) as total 
+    from $tableName
+    group by passenger_count, year, distance
+    order by year, total desc
+    
+Schema: (18 cols)
+
+
+VendorID, String
+tpep_pickup_datetime, Timestamp
+tpep_dropoff_datetime, Timestamp
+passenger_count, Integer
+trip_distance, Double
+PULocationID, Integer
+DOLocationID, Integer
+RateCodeID, Integer
+store_and_fwd_flag, String
+payment_type, Integer
+fare_amount, Double
+extra, Double
+mta_tax, Double
+improvement_surcharge, Double
+tip_amount, Double
+tolls_amount, Double
+total_amount, Double
+congestion_surcharge

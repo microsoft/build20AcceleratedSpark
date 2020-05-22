@@ -1,0 +1,73 @@
+{
+    "collection":
+    [
+        {
+            "id": "3badffe8-8aa9-4df6-9c79-1748858c4e52",
+            "runId": "dca454f1-1a0a-4e68-8b51-cf00cb24823f",
+            "name": "magenta_out",
+            "timestamp": "2020-04-09T08:00:32.829Z",
+            "batchId": 19,
+            "numInputRows": 30080,
+            "inputRowsPerSecond": 40758.807588075884,
+            "processedRowsPerSecond": 40375.838926174496,
+            "durationMs": {
+                "addBatch": 650,
+                "getBatch": 5,
+                "getOffset": 22,
+                "queryPlanning": 34,
+                "triggerExecution": 745,
+                "walCommit": 17
+            },
+            "stateOperators": [],
+            "sources": [
+                {
+                    "description": "FileStreamSource[file:/home/boris/yellow/magenta/raw]",
+                    "startOffset": {
+                        "logOffset": 18
+                    },
+                    "endOffset": {
+                        "logOffset": 19
+                    },
+                    "numInputRows": 30080,
+                    "inputRowsPerSecond": 40758.807588075884,
+                    "processedRowsPerSecond": 40375.838926174496
+                }
+            ],
+            "sink": {
+                "description": "FileSink[/home/boris/yellow/magenta/processed]"
+            }
+        },
+        {
+            "id": "3badffe8-8aa9-4df6-9c79-1748858c4e52",
+            "runId": "dca454f1-1a0a-4e68-8b51-cf00cb24823f",
+            "name": "magenta_out",
+            "timestamp": "2020-04-09T08:00:33.574Z",
+            "batchId": 20,
+            "numInputRows": 0,
+            "inputRowsPerSecond": 0.0,
+            "processedRowsPerSecond": 0.0,
+            "durationMs": {
+                "getOffset": 2,
+                "triggerExecution": 2
+            },
+            "stateOperators": [],
+            "sources": [
+                {
+                    "description": "FileStreamSource[file:/home/boris/yellow/magenta/raw]",
+                    "startOffset": {
+                        "logOffset": 19
+                    },
+                    "endOffset": {
+                        "logOffset": 19
+                    },
+                    "numInputRows": 0,
+                    "inputRowsPerSecond": 0.0,
+                    "processedRowsPerSecond": 0.0
+                }
+            ],
+            "sink": {
+                "description": "FileSink[/home/boris/yellow/magenta/processed]"
+            }
+        }
+    ]
+}
